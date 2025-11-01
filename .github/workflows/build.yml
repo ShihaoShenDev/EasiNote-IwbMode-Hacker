@@ -1,4 +1,4 @@
-name: Build Application & Release
+name: Build Application
 
 on:
   push:
@@ -31,11 +31,5 @@ jobs:
     - name: Publish binaries
       uses: actions/upload-artifact@v4
       with:
-        name: EasiNote IwbMode Hacker
+        name: EasiNote-IwbMode-Hacker
         path: dist
-    - name: GH Release
-      uses: softprops/action-gh-release@v2.4.1
-      with:
-          repository: ShihaoShenDev/EasiNote-IwbMode-Hacker
-          token: ${{ secrets.GH_RELEASE }}
-        
