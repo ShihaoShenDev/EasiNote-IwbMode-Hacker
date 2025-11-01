@@ -35,7 +35,6 @@ jobs:
         path: dist
     - name: GH Release
       uses: softprops/action-gh-release@v2.4.1
-      if: github.ref_type == 'tag'
       with:
           repository: ShihaoShenDev/EasiNote-IwbMode-Hacker
           token: ${{ secrets.GH_RELEASE }}
